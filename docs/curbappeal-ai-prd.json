@@ -1,0 +1,353 @@
+{
+  "project": {
+    "name": "CurbAppeal AI",
+    "domain": "curbappeal-ai.com",
+    "version": "1.0.0",
+    "created": "2025-08-10",
+    "status": "development"
+  },
+  "overview": {
+    "vision": "Transform the way homeowners and real estate professionals approach curb appeal through AI-powered visual analysis and actionable recommendations.",
+    "mission": "Help every property reach its maximum market appeal potential by providing instant, professional-grade curb appeal assessments and detailed improvement roadmaps.",
+    "problem_statement": "Many homes sit on the market longer than necessary because owners and realtors lack professional guidance on which exterior improvements would have the greatest impact on curb appeal and market value.",
+    "target_market": ["homeowners_selling", "real_estate_agents", "property_investors", "home_improvement_contractors"]
+  },
+  "user_personas": [
+    {
+      "name": "Sarah the Seller",
+      "description": "Homeowner preparing to sell",
+      "pain_points": ["Doesn't know which improvements to prioritize", "Limited budget for improvements", "Wants maximum ROI on investments"],
+      "goals": ["Sell home quickly", "Maximize sale price", "Invest improvement budget wisely"]
+    },
+    {
+      "name": "Mike the Realtor",
+      "description": "Real estate agent helping clients",
+      "pain_points": ["Needs professional recommendations for clients", "Time-consuming to assess multiple properties", "Wants data-driven advice"],
+      "goals": ["Help clients sell faster", "Provide professional value", "Stand out from competitors"]
+    },
+    {
+      "name": "Jennifer the Investor",
+      "description": "Property investor evaluating acquisitions",
+      "pain_points": ["Needs quick property assessments", "Must estimate improvement costs", "Risk of over-investing in wrong areas"],
+      "goals": ["Identify high-potential properties", "Accurate cost estimation", "Maximize flip profits"]
+    }
+  ],
+  "core_features": {
+    "instant_analysis": {
+      "description": "Single photo upload for immediate AI-powered curb appeal assessment",
+      "user_flow": [
+        "User uploads home exterior photo",
+        "AI analyzes image across 10 criteria",
+        "System generates score (X/50 points)",
+        "User receives instant feedback with positive lead-in and direct recommendations"
+      ],
+      "technical_requirements": [
+        "Image upload with drag & drop interface",
+        "OpenAI GPT-4 Vision API integration",
+        "Real-time analysis (< 30 seconds)",
+        "Responsive scoring display"
+      ]
+    },
+    "email_capture": {
+      "description": "Convert users to detailed analysis with email collection",
+      "user_flow": [
+        "User completes instant analysis",
+        "System offers comprehensive report",
+        "User enters email for detailed analysis",
+        "Email confirmation sent"
+      ],
+      "technical_requirements": [
+        "Email validation and storage",
+        "Automated email confirmation",
+        "Integration with report generation system"
+      ]
+    },
+    "multi_photo_upload": {
+      "description": "Collect additional property angles for comprehensive analysis",
+      "user_flow": [
+        "User uploads 3-5 additional exterior photos",
+        "System processes all images",
+        "AI conducts thorough multi-angle analysis",
+        "Comprehensive report generated"
+      ],
+      "technical_requirements": [
+        "Bulk photo upload interface",
+        "Image optimization and storage",
+        "Multi-image AI analysis",
+        "Progress indicators"
+      ]
+    },
+    "comprehensive_reporting": {
+      "description": "Generate detailed 8-10 page improvement reports",
+      "components": [
+        "Executive summary with overall score",
+        "Detailed analysis of each 10 criteria",
+        "Incremental improvement recommendations (low/medium/high cost)",
+        "ROI projections and market impact",
+        "Before/after visualization concepts",
+        "Professional contractor recommendations",
+        "Timeline and priority matrix",
+        "Local market insights"
+      ],
+      "technical_requirements": [
+        "PDF generation with professional templates",
+        "Dynamic content based on AI analysis",
+        "Cost estimation database",
+        "Market data integration"
+      ]
+    }
+  },
+  "evaluation_criteria": [
+    {
+      "id": 1,
+      "name": "Landscaping & Gardens",
+      "description": "Lawn condition, garden beds, tree maintenance, seasonal plantings",
+      "scoring_factors": ["Lawn health and coverage", "Garden bed design and maintenance", "Tree and shrub condition", "Seasonal color and appeal", "Weed control and edging"]
+    },
+    {
+      "id": 2,
+      "name": "Roofing Condition",
+      "description": "Roof material, gutters, chimneys, overall structural appearance",
+      "scoring_factors": ["Roof material condition", "Gutter cleanliness and alignment", "Chimney condition", "Missing or damaged elements", "Overall structural integrity appearance"]
+    },
+    {
+      "id": 3,
+      "name": "Exterior Paint & Siding",
+      "description": "Paint condition, siding maintenance, color coordination",
+      "scoring_factors": ["Paint freshness and coverage", "Siding condition and cleanliness", "Color coordination and appeal", "Trim and detail work", "Weather damage assessment"]
+    },
+    {
+      "id": 4,
+      "name": "Front Porch/Entry",
+      "description": "Entry door, porch condition, welcome appeal, accessibility",
+      "scoring_factors": ["Entry door condition and style", "Porch or entryway appeal", "Welcome elements (mat, plantings)", "Lighting and visibility", "Accessibility and approach"]
+    },
+    {
+      "id": 5,
+      "name": "Windows & Shutters",
+      "description": "Window condition, shutters, trim, cleanliness",
+      "scoring_factors": ["Window cleanliness and condition", "Shutter condition and style", "Window trim and framing", "Symmetry and proportion", "Screen condition"]
+    },
+    {
+      "id": 6,
+      "name": "Driveway & Walkways",
+      "description": "Pavement condition, walkway appeal, accessibility",
+      "scoring_factors": ["Driveway surface condition", "Walkway condition and safety", "Edging and definition", "Staining and cleanliness", "Accessibility and flow"]
+    },
+    {
+      "id": 7,
+      "name": "Lighting & Fixtures",
+      "description": "Exterior lighting, fixtures, safety, ambiance",
+      "scoring_factors": ["Fixture style and condition", "Lighting adequacy", "Safety and security lighting", "Aesthetic appeal", "Energy efficiency appearance"]
+    },
+    {
+      "id": 8,
+      "name": "Garage & Storage",
+      "description": "Garage door, storage visibility, organization",
+      "scoring_factors": ["Garage door condition and style", "Storage organization visibility", "Integration with home design", "Functionality appearance", "Cleanliness and maintenance"]
+    },
+    {
+      "id": 9,
+      "name": "Fencing & Boundaries",
+      "description": "Fence condition, property boundaries, privacy elements",
+      "scoring_factors": ["Fence condition and style", "Property boundary definition", "Privacy and security elements", "Integration with landscape", "Maintenance and repair needs"]
+    },
+    {
+      "id": 10,
+      "name": "Overall Symmetry & Design",
+      "description": "Architectural harmony, proportions, cohesive design",
+      "scoring_factors": ["Architectural style consistency", "Proportional balance", "Color and material harmony", "Design flow and cohesion", "Neighborhood compatibility"]
+    }
+  ],
+  "user_journeys": {
+    "quick_assessment": {
+      "steps": [
+        "User visits curbappeal-ai.com",
+        "Uploads single home exterior photo",
+        "Receives instant AI analysis with score (X/50)",
+        "Views positive feedback with direct recommendations",
+        "Option to upgrade to detailed report"
+      ],
+      "duration": "2-3 minutes",
+      "conversion_goal": "Email capture for detailed analysis"
+    },
+    "detailed_analysis": {
+      "steps": [
+        "User enters email after quick assessment",
+        "Uploads 3-5 additional exterior photos",
+        "AI conducts comprehensive analysis",
+        "Receives 8-10 page detailed report via email",
+        "Reviews recommendations and cost estimates"
+      ],
+      "duration": "10-15 minutes",
+      "conversion_goal": "Report download and contractor referrals"
+    }
+  },
+  "technical_specifications": {
+    "web_application": {
+      "framework": "React 18 + TypeScript + Vite",
+      "styling": "Tailwind CSS + Headless UI",
+      "state_management": "Zustand",
+      "forms": "React Hook Form + Zod validation",
+      "file_upload": "React Dropzone + image optimization",
+      "routing": "React Router v6",
+      "testing": "Vitest + React Testing Library"
+    },
+    "ios_application": {
+      "framework": "SwiftUI + Combine",
+      "camera": "AVFoundation for photo capture",
+      "networking": "URLSession with async/await",
+      "storage": "Core Data for local caching",
+      "ui_components": "Custom SwiftUI components",
+      "testing": "XCTest framework"
+    },
+    "backend_services": {
+      "database": "Supabase PostgreSQL",
+      "authentication": "Supabase Auth",
+      "file_storage": "Supabase Storage",
+      "ai_analysis": "OpenAI GPT-4 Vision API",
+      "report_generation": "React-PDF + custom templates",
+      "email_service": "Supabase email templates"
+    },
+    "integrations": {
+      "ai_vision": "OpenAI GPT-4 Vision for image analysis",
+      "cost_estimation": "Custom database with regional pricing",
+      "market_data": "Real estate market API integration",
+      "contractor_network": "Partner contractor database",
+      "payment_processing": "Stripe for premium reports"
+    }
+  },
+  "business_model": {
+    "revenue_streams": [
+      {
+        "type": "freemium",
+        "description": "Basic single-photo analysis with limited daily uses",
+        "price": "$0",
+        "limitations": ["3 analyses per day", "Basic feedback only", "No detailed reports"]
+      },
+      {
+        "type": "premium_reports",
+        "description": "Detailed 8-10 page comprehensive analysis",
+        "price": "$9.99",
+        "features": ["Multi-photo analysis", "Detailed recommendations", "Cost estimates", "PDF report download"]
+      },
+      {
+        "type": "realtor_subscription",
+        "description": "Unlimited analyses for real estate professionals",
+        "price": "$29/month",
+        "features": ["Unlimited quick analyses", "5 detailed reports/month", "Branded reports", "Client management"]
+      },
+      {
+        "type": "api_access",
+        "description": "API integration for real estate platforms",
+        "price": "Custom pricing",
+        "features": ["White-label integration", "Custom branding", "Volume discounts", "Technical support"]
+      }
+    ],
+    "cost_structure": [
+      "AI API costs (OpenAI GPT-4 Vision)",
+      "Cloud hosting and storage (Supabase)",
+      "Development and maintenance",
+      "Customer acquisition",
+      "Payment processing fees"
+    ]
+  },
+  "success_metrics": {
+    "user_engagement": [
+      "Photo upload completion rate > 85%",
+      "Time spent on analysis results > 2 minutes",
+      "Return visitor rate > 25%",
+      "Mobile vs desktop usage ratio"
+    ],
+    "conversion_metrics": [
+      "Email capture rate > 40%",
+      "Free to paid conversion > 15%",
+      "Realtor subscription retention > 80%",
+      "API trial to paid conversion > 30%"
+    ],
+    "quality_metrics": [
+      "User satisfaction score > 4.2/5",
+      "Report accuracy feedback > 4.0/5",
+      "Recommendation helpfulness > 4.3/5",
+      "Technical performance (< 30s analysis time)"
+    ],
+    "business_metrics": [
+      "Monthly recurring revenue growth",
+      "Customer acquisition cost",
+      "Lifetime value to CAC ratio > 3:1",
+      "Churn rate < 5% monthly"
+    ]
+  },
+  "development_phases": {
+    "phase_1_foundation": {
+      "duration": "2-3 weeks",
+      "deliverables": [
+        "Project setup and configuration",
+        "Basic UI/UX design system",
+        "Photo upload functionality",
+        "Simple scoring display",
+        "Database schema design"
+      ]
+    },
+    "phase_2_core_features": {
+      "duration": "3-4 weeks",
+      "deliverables": [
+        "AI analysis integration",
+        "10-criteria scoring system",
+        "Email capture flow",
+        "Basic report generation",
+        "User authentication"
+      ]
+    },
+    "phase_3_advanced_analysis": {
+      "duration": "2-3 weeks",
+      "deliverables": [
+        "Multi-photo upload system",
+        "Comprehensive report generation",
+        "Cost estimation engine",
+        "PDF report templates",
+        "Payment integration"
+      ]
+    },
+    "phase_4_polish_seo": {
+      "duration": "2 weeks",
+      "deliverables": [
+        "Performance optimization",
+        "SEO implementation",
+        "Mobile responsiveness",
+        "Error handling",
+        "Analytics integration"
+      ]
+    },
+    "phase_5_launch": {
+      "duration": "1-2 weeks",
+      "deliverables": [
+        "Production deployment",
+        "User testing feedback",
+        "Bug fixes and improvements",
+        "Launch marketing",
+        "Monitoring setup"
+      ]
+    }
+  },
+  "risk_assessment": {
+    "technical_risks": [
+      "AI analysis accuracy and consistency",
+      "Image processing performance at scale",
+      "Cost management of AI API usage",
+      "Report generation performance"
+    ],
+    "business_risks": [
+      "Market acceptance of AI recommendations",
+      "Competition from established real estate tools",
+      "Seasonal demand fluctuations",
+      "Customer acquisition costs"
+    ],
+    "mitigation_strategies": [
+      "Extensive AI prompt testing and validation",
+      "Performance monitoring and optimization",
+      "Usage-based pricing model",
+      "Strong SEO and content marketing strategy"
+    ]
+  }
+}
